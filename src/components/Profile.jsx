@@ -11,7 +11,6 @@ function Profile() {
         />
         <div>
           <h2 className="text-2xl font-bold">Essateric</h2>
-          <p className="text-gray-600">Git Integration & Wix CLI Repository</p>
         </div>
       </div>
     </div>

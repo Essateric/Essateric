@@ -10,7 +10,6 @@ function Header() {
             alt="Logo" 
             className="h-8 w-8"
           />
-          <h1 className="text-xl font-bold">Git Integration & Wix CLI</h1>
         </div>
       </div>
     </header>
