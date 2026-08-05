@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebook, FaInstagram, FaEnvelope } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 function Footer() {
   return (
@@ -8,12 +8,22 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-xl font-bold mb-4">Contact</h3>
-            <a 
-              href="mailto:essateric@gmail.com"
-              className="inline-block text-gray-300 hover:text-[#00FFB2] transition-colors duration-300"
-            >
-              <FaEnvelope className="w-6 h-6 hover:shadow-[0_0_20px_rgba(0,255,178,0.6)]" />
-            </a>
+            <div className="flex flex-col gap-3">
+              <a
+                href="mailto:essateric@gmail.com"
+                className="inline-flex items-center gap-3 text-gray-300 hover:text-[#00FFB2] transition-colors duration-300"
+              >
+                <FaEnvelope className="w-5 h-5 hover:shadow-[0_0_20px_rgba(0,255,178,0.6)]" />
+                <span>essateric@gmail.com</span>
+              </a>
+              <a
+                href="tel:07305422191"
+                className="inline-flex items-center gap-3 text-gray-300 hover:text-[#00FFB2] transition-colors duration-300"
+              >
+                <FaPhone className="w-5 h-5 hover:shadow-[0_0_20px_rgba(0,255,178,0.6)]" />
+                <span>07305 422 191</span>
+              </a>
+            </div>
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>

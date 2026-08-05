@@ -96,12 +96,17 @@ const handleSubmit = async (e) => {
 
   setLoading(true);
   try {
-    const webhookUrl = 'https://hook.eu2.make.com/3j85mnuvxdxprsupbmqd1qbz8ctqstot';
-    const response = await fetch(webhookUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
-    });
+    const response = await fetch('/.netlify/functions/sendEssatericContactEmail', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(formData),
+});
+
+if (!response.ok) {
+  const msg = await response.text();
+  throw new Error(msg || 'Failed to submit form');
+}
+
 
     if (!response.ok) {
       throw new Error('Failed to submit form');

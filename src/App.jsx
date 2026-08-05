@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import VoiceflowWidget from './components/VoiceflowWidget';
 import Checkout from './components/Checkout';
 import Sava from './pages/Sava';
+import Esops from './pages/Esops';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <div className="min-h-screen bg-black text-white">
         <Routes>
           <Route path="/sava" element={<Sava />} />
+              <Route path="/esops" element={<Esops />} />
           <Route path="/checkout/:priceId" element={<Checkout />} />
           <Route path="/" element={
             <>
