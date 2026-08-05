@@ -24,12 +24,6 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, ease: 'easeOut' }}
         >
-          <img 
-            src="/essateric_white.png" 
-            alt="Essateric Solutions Logo" 
-            className="mb-10 h-auto w-44 sm:w-52"
-          />
-
           <p className="mb-5 text-sm font-semibold uppercase tracking-[0.22em] text-[#00FFB2] sm:text-base">
             Practical AI automation for growing businesses
           </p>

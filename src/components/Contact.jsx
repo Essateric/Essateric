@@ -130,7 +130,7 @@ if (!response.ok) {
 
 
   return (
-    <section className="py-20 px-4 bg-black/50">
+    <section id="contact" className="scroll-mt-20 py-20 px-4 bg-black/50">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

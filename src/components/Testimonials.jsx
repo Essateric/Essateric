@@ -42,7 +42,7 @@ function Testimonials() {
   };
 
   return (
-    <section className="py-20 px-4">
+    <section id="results" className="scroll-mt-20 py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <motion.h2 
           className="text-4xl font-bold text-center mb-16"
