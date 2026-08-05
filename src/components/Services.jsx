@@ -32,7 +32,7 @@ function Services() {
   ];
 
   return (
-    <section id="solutions" className="py-20 px-4 bg-black/50 scroll-mt-8">
+    <section className="py-20 px-4 bg-black/50">
       <div className="max-w-6xl mx-auto">
         <motion.h2 
           className="text-4xl font-bold text-center mb-8"
