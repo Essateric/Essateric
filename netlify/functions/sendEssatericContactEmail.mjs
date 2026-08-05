@@ -30,6 +30,14 @@ const isEmail = (value = "") =>
   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value).trim());
 
 const clean = (v = "") => String(v).replace(/\r/g, "").trim();
+const escapeHtml = (value = "") =>
+  String(value).replace(/[&<>"']/g, (character) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#039;",
+  })[character]);
 
 export const handler = async (event) => {
   try {
@@ -91,6 +99,11 @@ export const handler = async (event) => {
     const cc = process.env.ESSATERIC_CONTACT_CC || undefined;
 
     const fullName = `${firstName} ${lastName}`.trim();
+    const safeFullName = escapeHtml(fullName);
+    const safeEmail = escapeHtml(email);
+    const safePhone = escapeHtml(phone);
+    const safeSubject = escapeHtml(subject);
+    const safeMessage = escapeHtml(message);
 
     // Useful meta
     const ip =
@@ -123,13 +136,13 @@ export const handler = async (event) => {
 
     const html = `
       <h2>New contact form submission</h2>
-      <p><strong>Name:</strong> ${fullName}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ""}
-      ${subject ? `<p><strong>Subject:</strong> ${subject}</p>` : ""}
+      <p><strong>Name:</strong> ${safeFullName}</p>
+      <p><strong>Email:</strong> ${safeEmail}</p>
+      ${phone ? `<p><strong>Phone:</strong> ${safePhone}</p>` : ""}
+      ${subject ? `<p><strong>Subject:</strong> ${safeSubject}</p>` : ""}
       <hr />
       <p><strong>Message:</strong></p>
-      <p style="white-space:pre-wrap;">${message}</p>
+      <p style="white-space:pre-wrap;">${safeMessage}</p>
       <hr />
       <p><small>${ip ? `IP: ${ip}<br/>` : ""}${ua ? `UA: ${ua}<br/>` : ""}Time: ${new Date().toISOString()}</small></p>
     `;

@@ -107,11 +107,6 @@ if (!response.ok) {
   throw new Error(msg || 'Failed to submit form');
 }
 
-
-    if (!response.ok) {
-      throw new Error('Failed to submit form');
-    }
-
     setSuccess(true);
     setFormData({
       firstName: '',
