@@ -11,6 +11,11 @@ function Services() {
     window.scrollTo(0, 0);
   };
 
+    const handleEsopsClick = () => {
+    navigate('/esops');
+    window.scrollTo(0, 0);
+  };
+
   const services = [
     {
       icon: UserGroupIcon,
@@ -27,7 +32,7 @@ function Services() {
   ];
 
   return (
-    <section className="py-20 px-4 bg-black/50">
+    <section id="solutions" className="py-20 px-4 bg-black/50 scroll-mt-8">
       <div className="max-w-6xl mx-auto">
         <motion.h2 
           className="text-4xl font-bold text-center mb-8"
@@ -69,6 +74,38 @@ function Services() {
             </div>
           </div>
         </motion.div>
+
+         {/* EsOps Introduction */}
+        <motion.div
+          className="backdrop-blur-lg bg-black/50 rounded-2xl p-8 mb-16 shadow-[0_0_50px_rgba(255,255,255,0.15)]"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="w-[900px] h-[400px] flex items-center justify-center">
+              <img 
+                src="/esops-logo.svg" 
+                alt="EsOps - Coffee Shop Operations" 
+                className="w-[900px] h-[400px] object-contain"
+              />
+            </div>
+            <div className="flex flex-col">
+              <h3 className="text-2xl font-bold mb-4 text-white">Meet EsOps - Your Coffee Shop Command Center</h3>
+              <p className="text-gray-300 mb-6">
+                EsOps helps coffee shop owners run smoother shifts with AI-driven prep plans, staffing insights, 
+                and real-time inventory tracking. Spend less time in spreadsheets and more time serving great coffee.
+              </p>
+              <button
+                onClick={handleEsopsClick}
+                className="btn-metallic-green px-6 py-3 rounded-full text-black font-bold w-full md:w-auto self-center"
+              >
+                Learn More About EsOps
+              </button>
+            </div>
+          </div>
+        </motion.div>
+        
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, index) => (
