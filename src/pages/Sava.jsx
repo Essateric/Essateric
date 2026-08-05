@@ -158,7 +158,7 @@ function VapiSalesPage() {
         isFreeTrialRequest: false
       });
     } catch (err) {
-      setError('Failed to send message. Please try again.');
+      setError('Failed to send message. Please call on 07305 422 191 for a chat instead.');
       console.error('Form submission error:', err);
     } finally {
       setLoading(false);
