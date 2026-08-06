@@ -27,6 +27,11 @@ const testimonials = [
     quote: 'I had an excellent experience working with Shabnam during my website development. She was consistently professional and knowledgeable, taking the time to understand my needs and clearly explain each stage of the design and development process. Throughout the project, I felt well-informed, supported, and confident in her expertise. The final website exceeded my expectations, with a clean design, smooth functionality, and great attention to detail. Shabnam demonstrates a commitment to quality and client satisfaction which is truly impressive, and I would highly recommend her.',
     author: 'Patricia Reilly-Hurst',
     company: ''
+  },
+  {
+    quote: 'Working with Shabnam has been an excellent experience. From the beginning, she has demonstrated a strong sense of ownership, technical expertise, and commitment to delivering a high-quality product. As the lead developer for Sanady, she has played a key role in transforming our vision into a scalable digital health platform. She has been highly responsive, proactive in solving complex technical challenges, and consistently focused on delivering solutions rather than obstacles. Her ability to understand both the technical and business requirements has made collaboration seamless throughout the development process. What stands out most is her reliability and dedication. She communicates clearly, meets deadlines, and genuinely cares about the success of the product. I would highly recommend Shabnam to any organisation looking for a talented, trustworthy, and results-driven technology partner.',
+    author: 'Hanin Atia',
+    company: 'Founder & CEO, Sanady'
   }
 ];
 
